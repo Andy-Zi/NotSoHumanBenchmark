@@ -23,7 +23,6 @@ class TypingTest(BaseGame):
     self.detectTypingArea()
     text = self.readText()
     text = self.cleanText(text)
-    print(text)
     self.type(text)
 
   def detectTypingArea(self):
