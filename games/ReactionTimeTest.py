@@ -45,7 +45,7 @@ class ReactionTimeTest(BaseGame):
         # Grab a small region around the center of the game area
         image = self.getGameAreaPicture()
 
-        mask = cv2.inRange(np.array(image), hex_to_rgb(sV.dark_colors["green"]), hex_to_rgb(sV.light_colors["green"]))
+        mask = cv2.inRange(np.array(image), hex_to_rgb(sV.colors["green"]), hex_to_rgb(sV.colors["green"]))
 
         # Check if the mask contains any green pixels
         if cv2.countNonZero(mask) > 0:

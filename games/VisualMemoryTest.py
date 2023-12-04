@@ -3,7 +3,6 @@ import numpy as np
 import cv2
 import time
 import pyautogui
-from PIL import ImageGrab, Image
 import keyboard
 
 import stupidValues as sV
@@ -31,7 +30,7 @@ class VisualMemoryTest(BaseGame):
 
   def startGame(self):
     image = self.getGameAreaPicture()
-    mask = cv2.inRange(np.array(image), hex_to_rgb(sV.dark_colors["yellow"]), hex_to_rgb(sV.light_colors["yellow"]))
+    mask = cv2.inRange(np.array(image), hex_to_rgb(sV.colors["yellow"]), hex_to_rgb(sV.colors["yellow"]))
     
     contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
@@ -47,7 +46,7 @@ class VisualMemoryTest(BaseGame):
   
   def determinePlayArea(self):
     image = self.getGameAreaPicture()
-    mask = cv2.inRange(np.array(image), hex_to_rgb(sV.dark_colors["darkBlue"]), hex_to_rgb(sV.light_colors["darkBlue"]))
+    mask = cv2.inRange(np.array(image), hex_to_rgb(sV.colors["darkBlue"]), hex_to_rgb(sV.colors["darkBlue"]))
     # get the contours in the mask
     contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
@@ -78,7 +77,7 @@ class VisualMemoryTest(BaseGame):
   def findPattern(self):
     image = self.getPlayArea()
     
-    mask = cv2.inRange(np.array(image), hex_to_rgb(sV.light_colors["white"]), hex_to_rgb(sV.light_colors["white"]))
+    mask = cv2.inRange(np.array(image), hex_to_rgb(sV.colors["white"]), hex_to_rgb(sV.colors["white"]))
 
     contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
     
@@ -97,7 +96,7 @@ class VisualMemoryTest(BaseGame):
   def waitToPlay(self):
     image = self.getPlayArea()
     
-    mask = cv2.inRange(np.array(image), hex_to_rgb(sV.light_colors["white"]), hex_to_rgb(sV.light_colors["white"]))
+    mask = cv2.inRange(np.array(image), hex_to_rgb(sV.colors["white"]), hex_to_rgb(sV.colors["white"]))
     
     contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
     
@@ -115,7 +114,7 @@ class VisualMemoryTest(BaseGame):
   def waitForNewRound(self):
     image = self.getPlayArea()
     
-    mask = cv2.inRange(np.array(image), hex_to_rgb(sV.light_colors["white"]), hex_to_rgb(sV.light_colors["white"]))
+    mask = cv2.inRange(np.array(image), hex_to_rgb(sV.colors["white"]), hex_to_rgb(sV.colors["white"]))
     
     contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
     

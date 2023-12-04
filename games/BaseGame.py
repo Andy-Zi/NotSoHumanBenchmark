@@ -31,7 +31,7 @@ class BaseGame(ABC):
             image_cv = np.array(screen)
 
             # Create a mask that captures areas of the image with blue color
-            mask = cv2.inRange(image_cv, hex_to_rgb(sV.dark_colors["blue"]), hex_to_rgb(sV.light_colors["blue"]))
+            mask = cv2.inRange(image_cv, hex_to_rgb(sV.colors["blue"]), hex_to_rgb(sV.colors["blue"]))
 
             # Find the contours in the mask
             contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
