@@ -5,5 +5,6 @@ colors = {
     "darkBlue": "#2573c1",
     "white": "#ffffff",
     "yellow": "#ffd154",
-    "lightBlue": "#95c3e8"
+    "lightBlue": "#95c3e8",
+    "ttwhite": "#ecf3fb",
 }

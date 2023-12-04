@@ -36,6 +36,10 @@ Once the script is running, it will automatically detect the Human Benchmark gam
 - OpenCV-Python
 - Keyboard
 - PyAutoGUI
+- pytesseract
+
+## Extra Dependencies
+- [Tesseract OCR](https://github.com/UB-Mannheim/tesseract/wiki) (for the Typing Test game you have to install Tesseract OCR to your system)
 
 ## Contributing
 Contributions to the NotSoHumanBenchmark project are welcome. If you have an idea for improving the code or adding new features, feel free to create a pull request.
