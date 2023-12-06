@@ -7,4 +7,5 @@ colors = {
     "yellow": "#ffd154",
     "lightBlue": "#95c3e8",
     "ttwhite": "#ecf3fb",
+    "chimpLightBlue": "#4693d5"
 }
